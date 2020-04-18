@@ -1,4 +1,4 @@
-package com.zjut.zjxjwxk.springboot;
+package com.zjut.zjxjwxk.springboot.dubbo;
 
 public interface ServiceAPI {
 
