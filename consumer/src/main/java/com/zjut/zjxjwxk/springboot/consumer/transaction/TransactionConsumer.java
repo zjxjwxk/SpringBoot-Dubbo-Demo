@@ -1,14 +1,14 @@
 package com.zjut.zjxjwxk.springboot.consumer.transaction;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.zjut.zjxjwxk.springboot.dubbo.ServiceAPI;
 import org.mengyun.tcctransaction.api.Compensable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TransactionConsumer {
 
-    @Reference(url = "dubbo://localhost:20880")
+    @Autowired
     private ServiceAPI serviceAPI;
 
     @Compensable(confirmMethod = "confirmSendMessage", cancelMethod = "cancelSendMessage", asyncConfirm = true)

@@ -4,4 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
        <dubbo:provider proxy="tccJavassist"/>
+
+       <dubbo:application name="consumer"/>
+
+       <dubbo:registry protocol="zookeeper" address="localhost:2181"/>
+
+       <dubbo:reference
+               id="serviceAPI"
+               interface="com.zjut.zjxjwxk.springboot.dubbo.ServiceAPI"
+       />
 </beans>

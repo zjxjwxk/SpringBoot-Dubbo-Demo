@@ -19,7 +19,7 @@ public class ConsumerApplication {
 
         // 测试分布式事务
         TransactionConsumer transactionConsumer = (TransactionConsumer) run.getBean("transactionConsumer");
-        transactionConsumer.sendMessage("123");
+        transactionConsumer.sendMessage("Hello");
     }
 
 }
