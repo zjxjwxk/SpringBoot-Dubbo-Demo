@@ -11,7 +11,7 @@ public class QuickStartConsumer {
     private ServiceAPI serviceAPI;
 
     public void sendMessage(String message) {
-        System.out.println(serviceAPI.sendMessage(message));
+        serviceAPI.sendMessage(message);
     }
 
 }

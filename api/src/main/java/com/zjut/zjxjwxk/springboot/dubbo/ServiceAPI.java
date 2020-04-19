@@ -1,6 +1,9 @@
 package com.zjut.zjxjwxk.springboot.dubbo;
 
+import org.mengyun.tcctransaction.api.Compensable;
+
 public interface ServiceAPI {
 
-    String sendMessage(String message);
+    @Compensable
+    void sendMessage(String message);
 }
